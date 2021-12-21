@@ -7,15 +7,16 @@
 		"AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
 		"AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}",
 		"AWS_REGION": "${localEnv:AWS_REGION}",
-		"GITLAB_USERNAME": "${localEnv:GITLAB_USERNAME}",
-		"GITLAB_TOKEN": "${localEnv:GITLAB_TOKEN}",
-		"TF_VAR_aws_role": "${localEnv:AWS_ROLE}",
+		"AUTH0_DOMAIN": "${localEnv:AUTH0_DOMAIN}",
+		"AUTH0_CLIENT_ID": "${localEnv:AUTH0_CLIENT_ID}",
+		"AUTH0_CLIENT_SECRET": "${localEnv:AUTH0_CLIENT_SECRET}",
+		"TF_VAR_aws_role": "${localEnv:AWS_ROLE}"
 	 },
 
-	 "remoteEnv": { 
-		 "GOPATH": "${containerWorkspaceFolder}",
-		 "PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/bin"
-		},
+	//  "remoteEnv": { 
+	// 	 "GOPATH": "${containerWorkspaceFolder}",
+	// 	 "PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/bin"
+	// 	},
 	
 	// "initializeCommand": "docker login registry.gitlab.com -u ${localEnv:GITLAB_USERNAME} -p ${localEnv:GITLAB_TOKEN}",
 	
@@ -27,7 +28,8 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	// Note that some extensions may not work in Alpine Linux. See https://aka.ms/vscode-remote/linux.
 	"extensions": [
-		"hashicorp.terraform"
+		"hashicorp.terraform",
+		"golang.go"
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.

@@ -17,6 +17,8 @@ COPY install-scripts/ $INSTALL_SCRIPT_DIR
 COPY tests/ $INSTALL_SCRIPT_DIR/tests
 RUN chmod +x $INSTALL_SCRIPT_DIR/* && chmod +x $INSTALL_SCRIPT_DIR/tests/*.sh
 
+ENV GOPATH=/go
+ENV PATH=$PATH:$GOPATH/bin
 
 # Install Major Dependencies
 RUN install-terraform
