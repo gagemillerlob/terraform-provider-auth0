@@ -23,10 +23,6 @@ RUN install-terraform
 RUN install-node14
 RUN install-python3
 RUN install-dockercli
-
-ENV GOROOT /usr/lib/go
-ENV GOPATH /go
-ENV PATH /go/bin:$PATH
 RUN install-go
 
 # Test Dependencies

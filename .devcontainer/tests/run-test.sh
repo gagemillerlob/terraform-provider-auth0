@@ -21,7 +21,7 @@ check "terraform" terraform --version
 check "pip" pip --version
 check "python3" python3 --version
 check "docker" docker -v
+check "go" go version
 check "install scripts directory" [ -d $INSTALL_SCRIPT_DIR ]
-
 # Report result
 reportResults
