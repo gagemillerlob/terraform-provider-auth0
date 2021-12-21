@@ -1,0 +1,4 @@
+#!/bin/bash
+apk add --no-cache make musl-dev go
+mkdir -p ${GOPATH}/src ${GOPATH}/bin
+go version
