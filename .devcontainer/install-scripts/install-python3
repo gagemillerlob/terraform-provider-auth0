@@ -1,0 +1,3 @@
+#!/bin/bash
+apk add -v --update --no-cache python3 py3-pip
+pip3 install --no-cache --upgrade pip setuptools
